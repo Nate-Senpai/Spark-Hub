@@ -137,21 +137,15 @@ end
 Settings = game:service'HttpService':JSONEncode(readfile(Name))
 end)
 
-local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
+local LibName = SparkHub
 
 function Kavo:ToggleUI()
-
-userInput.InputBegan:Connect(function(input,gameProcessed)
-        if input.KeyCode == Enum.KeyCode.Q then
-if game.CoreGui[LibName].Enabled then
+    if game.CoreGui[LibName].Enabled then
         game.CoreGui[LibName].Enabled = false
     else
         game.CoreGui[LibName].Enabled = true
+    end
 end
-end
-end)
-end
-    
 
 function Kavo.CreateLib(kavName, themeList)
     if not themeList then
