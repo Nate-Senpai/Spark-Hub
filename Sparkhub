@@ -7,11 +7,11 @@ local UI = Material.Load({
      Theme = "Dark"
 })
 
---Era of Althea
+--Blox Fruits
 if game.PlaceId == 2753915549 or 4442272183 then
 
 local Page = UI.New({
-    Title = "Main"
+    Title = "Main (Blox)"
 })
 Page.Button({
     Text = "Credits",
@@ -68,7 +68,7 @@ Page.Button({
 
 --Era
 local Page = UI.New({
-    Title = "Main"
+    Title = "Main (Era)"
 })
 Page.Button({
     Text = "Credits",
