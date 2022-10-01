@@ -65,7 +65,7 @@ Page.Button({
 
 
 
-
+elseif game.PlaceId == 9840387028 then
 --Era
 local Page = UI.New({
     Title = "Main (Era)"
