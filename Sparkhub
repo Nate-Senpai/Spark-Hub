@@ -7,6 +7,8 @@ local UI = Material.Load({
      Theme = "Dark"
 })
 
+--Era of Althea
+if game.PlaceId == 2753915549 or 4442272183 then
 
 local Page = UI.New({
     Title = "Main"
@@ -29,10 +31,7 @@ Page.Toggle({
         Enabled = value
         if value == true then do
         spawn(function()
-            
-
 _G.Toggle = true -- Change to false and execute to turn off
-
 while _G.Toggle do wait()
 local speaker = game.Players.LocalPlayer
 wait(0.1)
@@ -41,15 +40,10 @@ game:GetService("Lighting").ColorCorrection.Enabled = false
 game:GetService("Lighting").GlobalColorCorrection.Enabled = false
 game:GetService("Lighting")["Blur [Shader Mod]"].Enabled = false
 end
-
-
 game:GetService("RunService").Heartbeat:Wait()
-	
         end)
         end
         else
-            
-
 _G.Toggle = false 
 end
 end
@@ -57,6 +51,64 @@ end
 Enabled = false
 })
 
+
+local Page = UI.New({
+    Title = "Scripts"
+})
+Page.Button({
+    Text = "Depression GUI",
+    Callback = function()
+  loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+}
+
+
+
+
+
+
+--Era
+local Page = UI.New({
+    Title = "Main"
+})
+Page.Button({
+    Text = "Credits",
+    Callback = function()
+       wait(1.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Credits:"; -- the title (ofc)
+Text = "Nate <o/"; -- what the text says (ofc)
+Duration = 5; -- how long the notification should in secounds
+})
+end
+})
+
+Page.Toggle({
+    Text = "Disable Blur",
+    Callback = function(value)
+        Enabled = value
+        if value == true then do
+        spawn(function()
+_G.Toggle = true -- Change to false and execute to turn off
+while _G.Toggle do wait()
+local speaker = game.Players.LocalPlayer
+wait(0.1)
+game:GetService("Lighting").Blur.Enabled = false
+game:GetService("Lighting").ColorCorrection.Enabled = false
+game:GetService("Lighting").GlobalColorCorrection.Enabled = false
+game:GetService("Lighting")["Blur [Shader Mod]"].Enabled = false
+end
+game:GetService("RunService").Heartbeat:Wait()
+        end)
+        end
+        else
+_G.Toggle = false 
+end
+end
+,
+Enabled = false
+})
+
+elseif game.PlaceId == 9840387028 then
 local Page = UI.New({
     Title = "Era of Althea"
 })
@@ -149,3 +201,4 @@ Page.Button({
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
 end
 })
+end
