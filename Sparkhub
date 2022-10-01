@@ -1,17 +1,20 @@
 local Material = loadstring(game:HttpGet("https://pastebin.pl/view/raw/aa32e07d"))()
-
+local UI = Material.Load({
+     Title = "SparkHub v1.3",
+     Style = 3,
+     SizeX = 300,
+     SizeY = 300,
+     Theme = "Dark"
+})
 local Page = UI.New({
     Title = "Era of Althea"
 })
-
-
 Page.Button({
     Text = "Buy Health Potion",
     Callback = function()
        local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Large Health Potion")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
 end
 })
@@ -21,7 +24,6 @@ Page.Button({
   local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Large Mana Potion")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
 end
 })
@@ -31,7 +33,6 @@ Page.Button({
   local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Teleport Crystal")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
 end
 })
@@ -42,40 +43,28 @@ Page.Toggle({
         if value == true then do
         spawn(function()
             
-
 _G.Toggle = true -- Change to false and execute to turn off
-
 while _G.Toggle do wait()
 local speaker = game.Players.LocalPlayer
-
 local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Teleport Crystal")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
-
-
 local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Large Mana Potion")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
-
-
        local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Large Health Potion")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
 end
-
 game:GetService("RunService").Heartbeat:Wait()
 	
         end)
         end
         else
             
-
 _G.Toggle = false 
 end
 end
@@ -88,7 +77,6 @@ Page.Button({
   local args = {
     [1] = workspace.Purchases.Items:FindFirstChild("Large All-Purpose Crystal")
 }
-
 game:GetService("ReplicatedStorage").Events.PurchaseItem:FireServer(unpack(args))
 end
 })
