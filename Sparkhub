@@ -2,6 +2,7 @@ repeat wait() until game:IsLoaded()
 local PlaceId = game.PlaceId
 if PlaceId == 2753915549 or PlaceId == 4442272183 or PlaceId == 7449423635 then
     loadstring(game:HttpGet"https://raw.githubusercontent.com/Nate-Senpai/Spark-Hub/Blox-Fruits/Sparkhub")()
-
+    elseif PlaceId == 9840387028 then
+ loadstring(game:HttpGet"https://raw.githubusercontent.com/Nate-Senpai/Spark-Hub/Era-Of-Althea/Sparkhub")()
 
 end
